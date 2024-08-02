@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+}
+
+#counter {
+padding: 20px;
+background-color: white;
+border: 1px solid #ccc;
+width: 200px;
+text-align: center;
+margin: 0 auto;
+}
+
+button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div id="counter">
+<h2>计数器</h2>
+<p>当前值: <span id="count">0</span></p >
+<button onclick="increment()">增加</button>
+<button onclick="decrement()">减少</button>
+</div>
+
+<script>
+let count = 0;
+
+function increment() {
+count++;
+document.getElementById('count').innerHTML = count;
+}
+
+function decrement() {
+if (count > 0) {
+count--;
+document.getElementById('count').innerHTML = count;
+}
+}
+</script>
+
+</body>
+
+</html>
